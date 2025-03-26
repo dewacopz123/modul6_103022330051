@@ -1,23 +1,18 @@
 ﻿using modul6_103022330051;
-using System;
 
-class Program
+class program
 {
     static void Main()
     {
-        SayaTubeUser user = new SayaTubeUser("ZAKY");
-
-        string[] filmList =
+        SayaTubeUser user = new SayaTubeUser("Zaky");
+        List<string> video = new List<string> { "a", "b", "c", "d", "e", "f", "g", "h", "i", "j" };
+        foreach (var film in video)
         {
-            "1","2","3","4","5","6","7","8","9","10"
-        };
-
-        foreach (var title in filmList)
-        {
-            SayaTubeVideo video = new SayaTubeVideo(title);
-            user.AddVideo(video);
+            SayaTubeVideo video1 = new SayaTubeVideo(film);
+            user.AddVideo(video1);
+            video1.PrintVideoDetails();
         }
 
-        user.PrintAllVideoPlaycount();
+        user.PrintAllVideoPlayCount();
     }
 }
